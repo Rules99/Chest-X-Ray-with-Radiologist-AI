@@ -411,3 +411,55 @@ def plotVisualization(conteo_train,conteo_val,conteo_test):
     axs[2].pie(values, labels = labels, autopct=make_autopct(values), shadow=True)
     axs[2].set_title('Conjunto de test')
     plt.show()
+
+
+from pydicom.pixel_data_handlers import apply_modality_lut, apply_voi_lut
+def preprocesimg(dcm_file,thr =  5):
+        # Load DICOM image
+        ds = dcmread(dcm_file)
+
+        # Verify orientation
+        # if ds.ViewPosition != 'AP' and ds.ViewPosition != 'PA':
+            
+
+        # Apply transformations if required
+        if ds.pixel_array.dtype != np.uint8:
+            # Apply LUT transforms
+            arr = apply_modality_lut(ds.pixel_array, ds)
+            if arr.dtype == np.float64 and ds.RescaleSlope == 1 and ds.RescaleIntercept == 0:
+                arr = arr.astype(np.uint16)
+            arr = apply_voi_lut(arr, ds)
+            arr = arr.astype(np.float64)
+
+            # Normalize to [0, 1]
+            arr = (arr - arr.min())/arr.ptp()
+
+            # Invert MONOCHROME1 images
+            if ds.PhotometricInterpretation == 'MONOCHROME1':
+                print('PHOTOMETRIC')
+                arr = 1. - arr
+            # Convert to uint8
+            image = np.uint8(255.*arr)
+        else:
+            # Invert MONOCHROME1 imagesA
+            if ds.PhotometricInterpretation == 'MONOCHROME1':
+                image = 255 - ds.pixel_array
+            else:
+                image = ds.pixel_array
+
+        _,thresh = cv2.threshold(image,image.min(),image.max(),cv2.THRESH_BINARY)
+        # Cut the countours of the image
+        contours,hierarchy = cv2.findContours(thresh,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
+        cnt = contours[0]
+        # Choose the vertex of the image 
+        x,y,w,h = cv2.boundingRect(cnt)
+        png_file = dcm_file[:dcm_file.find('.dcm')]+'.png'
+        if ((arr.shape[0]//thr)>w) or (((arr.shape[1]//thr)>h)):
+            cv2.imwrite(png_file,image)
+        else:
+            cv2.imwrite(png_file,image[y:y+h,x:x+w])
+        # Write the PNG file
+        # with open(f'{dcm_file.strip(".dcm")}.png', 'wb') as png_file:
+        #     w = png.Writer(ds.pixel_array.shape[1], ds.pixel_array.shape[0], greyscale=True)
+        #     w.write(png_file, image)
+        os.remove(dcm_file)
