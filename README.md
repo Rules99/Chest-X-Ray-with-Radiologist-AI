@@ -1,131 +1,116 @@
----
-title: Chest-X Ray with Radiologist AI
-emoji: 👨‍⚕️🦴
-colorFrom: black
-colorTo: white
-sdk: streamlit
-app_file: app.py
-pinned: false
----
-# Configuration
-`title`: _string_  
-Display title for the Space
-`emoji`: _string_  
-Space emoji (emoji-only character allowed)
-`colorFrom`: _string_  
-Color for Thumbnail gradient (red, yellow, green, blue, indigo, purple, pink, gray)
-`colorTo`: _string_  
-Color for Thumbnail gradient (red, yellow, green, blue, indigo, purple, pink, gray)
-`sdk`: _string_  
-Can be either `gradio` or `streamlit`
-`sdk_version` : _string_  
-Only applicable for `streamlit` SDK.  
-See [doc](https://hf.co/docs/hub/spaces) for more info on supported versions.
+# Chest-X Ray with Radiologist AI
+<a href="https://pytorch.org/get-started/locally/"><img alt="PyTorch" src="https://img.shields.io/badge/PyTorch-ee4c2c?logo=pytorch&logoColor=white"></a>
+[![Python version](https://img.shields.io/badge/python-3.8.13-blue.svg)](https://pypi.org/project/kedro/)
+[![License](https://img.shields.io/github/license/TezRomacH/python-package-template)](https://github.com/TezRomacH/python-package-template/blob/master/LICENSE)
 
-`app_file`: _string_  
-Path to your main application file (which contains either `gradio` or `streamlit` Python code).  
-Path is relative to the root of the repository.
-
-`pinned`: _boolean_  
-Whether the Space stays on top of your list.
-
-
-
-
+`cxrai` is a deep learning system in production tool to make Chest-X-Ray diagnosis
 
 <img src="./docs/doctors.jpg"
      alt="CX-AI Icon"
      style="text-align: center; margin-right: 10px;" />
 -----------------
 
-test
+# How to use it?
 
-# Chest-X Ray with Radiologist AI: production tool to make Chest-X-Ray Diagnosis
------------------
+## Project description
+Project description
 
-The use of software tools in medicine based on machine learning (ML) techniques has already shown a direct impact on the diagnosis in different clinical application areas. These techniques will likely help to provide better healthcare. In the same way, the revolution of personalized medicine requires the emerging analysis of many imaging-related data. This project's primary purpose would be to detect anomalies, conditions or pathologies in image tests like chest-X rays with ML-based techniques. We will explore the use and combination of other data types like the available collection of Electronic Health Records (EHR) of every single patient to develop novel treatments and identify patients who will benefit from them. 
-
-Project Organization
-------------
-
-    ├── LICENSE
-    ├── Makefile           <- Makefile with commands like `make data` or `make train`
-    ├── README.md          <- The top-level README for developers using this project.
-    ├── data
-    │   ├── external       <- Data from third party sources.
-    │   ├── interim        <- Intermediate data that has been transformed.
-    │   ├── processed      <- The final, canonical data sets for modeling.
-    │   └── raw            <- The original, immutable data dump.
-    │
-    ├── docs               <- A default Sphinx project; see sphinx-doc.org for details
-    │
-    ├── models             <- Trained and serialized models, model predictions, or model summaries
-    │
-    ├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
-    │                         the creator's initials, and a short `-` delimited description, e.g.
-    │                         `1.0-jqp-initial-data-exploration`.
-    │
-    ├── references         <- Data dictionaries, manuals, and all other explanatory materials.
-    │
-    ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
-    │   └── figures        <- Generated graphics and figures to be used in reporting
-    │
-    ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
-    │                         generated with `pip freeze > requirements.txt`
-    │
-    ├── setup.py           <- makes project pip installable (pip install -e .) so src can be imported
-    ├── src                <- Source code for use in this project.
-    │   ├── __init__.py    <- Makes src a Python module
-    │   │
-    │   ├── data           <- Scripts to download or generate data
-    │   │   └── make_dataset.py
-    │   │
-    │   ├── features       <- Scripts to turn raw data into features for modeling
-    │   │   └── build_features.py
-    │   │
-    │   ├── models         <- Scripts to train models and then use trained models to make
-    │   │   │                 predictions
-    │   │   ├── predict_model.py
-    │   │   └── train_model.py
-    │   │
-    │   └── visualization  <- Scripts to create exploratory and results oriented visualizations
-    │       └── visualize.py
-    │
-    └── tox.ini            <- tox file with settings for running tox; see tox.readthedocs.io
-
-
---------
-Instrucciones de instalación
-------------
-Notas: nameenv puede ser el nombre de entorno que tu prefieras, lo único que siempre debe ir junto.
-
-ESCRIBIMOS EN ANACONDA PROMPT LOS SIGUIENTES COMANDOS
-
-1. Crea un nuevo entorno de conda en python 3.8.13:
-
-```sh
-conda create -n nameenv python=3.8.13
-```
-
-2. Activa el entorno establecido:
-
-
-```sh
-conda activate nameenv
-```
-
-3. Instala los paquetes a requerir en el entorno:
-
-```sh
-pip install -r requirements.txt
-```
-Ejecución del código
-------------
+## Code execution
 
 ```sh
 streamlit run app.py
 ```
 
-Dependencias 
-------------
-- Python 3.8.13
+## Streamlit application
+
+--------
+# Development
+
+## Installation instructions
+
+Run the silent installation of Miniconda/Anaconda in case you don't have this software in your environment.
+
+```sh
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+bash Miniconda3-latest-Linux-x86_64.sh -b -p $HOME/miniconda3
+```
+
+Once you have installed Miniconda/Anaconda, create a Python 3.7 environment.
+
+```sh
+conda create --name cxr-rai python=3.8.13
+conda activate cxr-rai
+```
+
+Clone this repository and install it inside your recently created Conda environment.
+
+```sh
+git clone https://github.com/Rules99/Chest-X-Ray-with-Radiologist-AI
+cd Chest-X-Ray-with-Radiologist-AI
+pip install -r requirements.txt
+```
+
+## Dependencies installation
+- python 3.8.13
+- efficientnet 1.1.1
+- gensim 3.8.3
+- googletrans 4.0.0-rc1
+- grad-cam 1.3.7
+- h5py 3.1.0
+- imgaug 0.4.0
+- matplotlib 3.5.1
+- nltk 3.4.5
+- numpy 1.19.5
+- opencv-python-headless 
+- pandas   1.4.2
+- plotly   5.8.0
+- requests   2.27.1
+- scikit_image   0.19.2
+- scikit_learn   1.0.2
+- seaborn   0.11.2
+- streamlit   1.8.1
+- streamlit-option-menu   0.3.2
+- tensorflow 2.5.3
+- termcolor   1.1.0
+- torch   1.11.0
+- torchsummary   1.5.1
+- torchvision   0.12.0
+- torchxrayvision   0.0.32
+- transformers   2.5.1
+- tqdm 4.64.0
+- Pillow   9.1.0
+- protobuf   3.19.0
+
+--------
+# Authors & Contributors
+
+cxrai was developed by:
+- [Pablo Reyes](https://github.com/Rules99)
+- [Fernando Pozo](www.fpozoc.com)
+
+--------
+# Acknowledgements
+
+
+--------
+# FAQ
+
+
+--------
+# Citing cxrai
+
+```text
+@misc{10.1093/nargab/lqab044,
+    author = {Reyes, Pablo and Pozo, Fernando},
+    title = "{Sistema de identificación e interpretación de patologías pulmonares a partir de imágenes rayos X mediante Aprendizaje Profundo}",
+    year = {2022},
+    month = {06},
+    abstract = "{}",
+    url = {}
+}
+```
+
+
+--------
+# References
+
