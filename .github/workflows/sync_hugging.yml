@@ -16,4 +16,4 @@ jobs:
       - name: Push to hub
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
-        run: git push https://Rules:$HF_TOKEN@huggingface.co/spaces/Rules99/RAssistant2 main
+        run: git push https://Rules99:$HF_TOKEN@huggingface.co/spaces/Rules99/RAssistant2 main
