@@ -26,7 +26,7 @@ The application have four different menus, each one with its corresponding funct
 ## GIF functionality 
 Check out the following GIFs to get an intuitive idea of how the tool works!
 ### 0.Choose the convenient translator
-
+<div style="width:260px;max-width:100%;"><div style="height:0;padding-bottom:49.23%;position:relative;"><iframe width="260" height="128" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameBorder="0" src="https://imgflip.com/embed/6jo1we"></iframe></div><p><a href="https://imgflip.com/gif/6jo1we">via Imgflip</a></p></div>
 ### 1.Pneumonia Detection
 
 ### 2.Pathology Detection
