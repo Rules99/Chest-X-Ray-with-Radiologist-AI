@@ -27,8 +27,7 @@ The application have four different menus, each one with its corresponding funct
 Check out the following GIFs to get an intuitive idea of how the tool works!
 ### 0.Choose the convenient translator
 Select your language to interact with the app.
-![translator](https://user-images.githubusercontent.com/79108976/173665018-ac9a9021-d464-49a7-a6ad-08a467e07e83.gif)
-
+![Translator](https://user-images.githubusercontent.com/79108976/173670006-8cb033aa-f57e-4e06-9e41-17ef644e07c4.gif)
 ### 1.Pneumonia Detection
 
 ### 2.Pathology Detection
