@@ -2,31 +2,45 @@
 <a href="https://pytorch.org/get-started/locally/"><img alt="PyTorch" src="https://img.shields.io/badge/PyTorch-ee4c2c?logo=pytorch&logoColor=white"></a>
 [![Python version](https://img.shields.io/badge/python-3.8.13-blue.svg)](https://pypi.org/project/kedro/)
 [![License](https://img.shields.io/github/license/TezRomacH/python-package-template)](https://github.com/TezRomacH/python-package-template/blob/master/LICENSE)
-
-`cxrai` is a deep learning system in production tool to make Chest-X-Ray diagnosis
+[![Open In Collab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Naereen/badges)
+[![PyPi version](https://badgen.net/pypi/v/pip/)](https://pypi.com/project/pip)
+[![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/)
 
 <img src="./docs/doctors.jpg"
      alt="CX-AI Icon"
      style="text-align: center; margin-right: 10px;" />
+
+A deep learning system put into web production in order to supply radiological X-ray imaging assistance to physicians.
 -----------------
 
 # How to use it?
 
 ## Project description
-Project description
+The web application is based on four main menus with the objective of providing medical assistance regarding to chest-X-Ray image pathology detection. 
+The application have four different menus, each one with its corresponding functionality. 
+1. Detection of pneumonia : from a chest X-ray image it is possible to detect if the X-ray contains pneumonia or is a normal control. 
+2. Detection of multi-class pathologies: based on a radiographic image, possible pathologies are alerted. 
+3. Automatic medical report generation: a diagnostic report is generated in relation to possible pathologies found in the image.
+4. Radiology assistant: from an X-ray image it generates the three diagnoses mentioned above.
 
+## GIF functionality 
+Check out the following GIFs to get an intuitive idea of how the tool works!
+### 0.Choose the convenient translator
+
+### 1.Pneumonia Detection
+
+### 2.Pathology Detection
+### 3.Report Generation
+### 4.Radiology Assistant
 ## Code execution
 
 ```sh
 streamlit run app.py
 ```
-
-## Streamlit application
-
 --------
-# Development
+# Installation
 
-## Installation instructions
+## Instructions
 
 Run the silent installation of Miniconda/Anaconda in case you don't have this software in your environment.
 
@@ -50,7 +64,7 @@ cd Chest-X-Ray-with-Radiologist-AI
 pip install -r requirements.txt
 ```
 
-## Dependencies installation
+## Dependencies 
 - python 3.8.13
 - efficientnet 1.1.1
 - gensim 3.8.3
@@ -84,20 +98,22 @@ pip install -r requirements.txt
 --------
 # Authors & Contributors
 
-cxrai was developed by:
+The application was developed by:
 - [Pablo Reyes](https://github.com/Rules99)
 - [Fernando Pozo](www.fpozoc.com)
 
 --------
 # Acknowledgements
-
-
---------
-# FAQ
-
+We would like to thank the creators of the [Torchxrayvision](https://github.com/mlmed/torchxrayvision) platform for sharing their pre-trained X-ray image models.
+Also thanks to [Omar-Mohamed](https://github.com/omar-mohamed) for reproducing  automatic report generation model. 
 
 --------
-# Citing cxrai
+# Repositories
+- Torchxrayvision repo: [torchxrayvision](https://github.com/mlmed/torchxrayvision)
+- Automatic Generation repo : [GPT2-Chest-X-Ray-Report-Generation](https://github.com/omar-mohamed/GPT2-Chest-X-Ray-Report-Generation)
+
+--------
+# Citation
 
 ```text
 @misc{10.1093/nargab/lqab044,
@@ -109,8 +125,22 @@ cxrai was developed by:
     url = {}
 }
 ```
-
-
 --------
 # References
 
+### Databases
+
+- Chexpert : https://stanfordmlgroup.github.io/competitions/chexpert/
+- NIH      : https://www.nih.gov/
+- MIMIC-CXR-JPG : https://physionet.org/content/mimic-cxr-jpg/2.0.0/
+- China National Center for Bioinformation: https://ngdc.cncb.ac.cn/news/85
+
+### Papers
+https://link.springer.com/article/10.1007/s12559-020-09787-5
+
+https://www.researchgate.net/publication/355841287_TorchXRayVision_A_library_of_chest_X-ray_datasets_and_models
+
+
+https://pubmed.ncbi.nlm.nih.gov/32864270/
+
+https://www.sciencedirect.com/science/article/pii/S2352914821000472
