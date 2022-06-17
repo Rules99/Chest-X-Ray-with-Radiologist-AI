@@ -11,6 +11,8 @@
      style="text-align: center; margin-right: 10px;" />
 
 A deep learning system put into web production in order to supply radiological X-ray imaging assistance to physicians.
+
+**WARNING:The application web supplied is intended to be used as reference webpage. It is currently at research stage and not yet intended as production-ready webpage. We are currently trying to improve the results of the SOTA in order to have a useful and reliable application for the chest x ray imaging diagnostic.**
 -----------------
 
 # How to use it?
