@@ -5,7 +5,7 @@
 [![Open In Collab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Naereen/badges)
 [![PyPi version](https://badgen.net/pypi/v/pip/)](https://pypi.com/project/pip)
 [![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/)
-
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/rules99/chest-x-ray-with-radiologist-ai/main/app.py)
 <img src="./docs/doctors.jpg"
      alt="CX-AI Icon"
      style="text-align: center; margin-right: 10px;" />
