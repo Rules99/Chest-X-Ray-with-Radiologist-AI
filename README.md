@@ -104,7 +104,7 @@ pip install -r requirements.txt
 
 The application was developed by:
 - [Pablo Reyes](https://github.com/Rules99)
-- [Fernando Pozo](www.fpozoc.com)
+- [Fernando Pozo](https://github.com/fpozoc)
 
 --------
 # Acknowledgements
