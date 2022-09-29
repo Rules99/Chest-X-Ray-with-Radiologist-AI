@@ -25,17 +25,6 @@ The application have four different menus, each one with its corresponding funct
 3. Automatic medical report generation: a diagnostic report is generated in relation to possible pathologies found in the image.
 4. Radiology assistant: from an X-ray image it generates the three diagnoses mentioned above.
 
-## GIF functionality 
-Check out the following GIFs to get an intuitive idea of how the tool works!
-### 0.Choose the convenient translator
-Select your language to interact with the app.
-![Translator](https://user-images.githubusercontent.com/79108976/173670006-8cb033aa-f57e-4e06-9e41-17ef644e07c4.gif)
-### 1.Pneumonia Detection
-Detect the pneumonia along the image. 
-![Neumonia_model](https://user-images.githubusercontent.com/79108976/173673873-9fcae09f-9dac-47f6-828f-6b1653b872de.gif)
-### 2.Pathology Detection
-### 3.Report Generation
-### 4.Radiology Assistant
 ## Code execution
 
 ```sh
